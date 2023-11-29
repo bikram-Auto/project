@@ -1,4 +1,4 @@
-import { Controller, Get, Post } from "@nestjs/common";
+import { Controller, Get, Post, Req } from "@nestjs/common";
 
 
 @Controller()
@@ -9,7 +9,7 @@ export class AppController{
     }
 
     @Post('/user')
-    postUser(){
-        return 'it storing';
+    postUser(@Req() req: Request){
+        return req.body;
     }
 }

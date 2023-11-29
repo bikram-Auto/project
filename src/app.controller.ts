@@ -3,7 +3,7 @@ import { Controller, Get, Post, Req } from "@nestjs/common";
 
 @Controller()
 export class AppController{
-    @Get('/user')
+    @Get('/us')
     getUser(){
         return {name: 'bikash', class: '4th'};
     }
